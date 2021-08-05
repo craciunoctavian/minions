@@ -12,12 +12,12 @@ class Evil extends Player
     }
 
     public function getAttributes(){
-        echo "Evil powers:\n";
-        echo  $this->getHealth() . " health\n";
-        echo  $this->getDefense() . " defense\n";
-        echo  $this->getSpeed() . " speed\n";
-        echo  $this->getStrength() . " strength\n";
-        echo  $this->getLuck() . "% luck\n";
-
+        return
+            "EVIL powers:<br>".
+            $this->getHealth() . " health<br>" .
+            $this->getDefense() . " defense<br>" .
+            $this->getSpeed() . " speed<br>" .
+            $this->getStrength() . " strength<br>" .
+            $this->getLuck() . "% luck<br>";
     }
 }

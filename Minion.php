@@ -8,7 +8,8 @@ class Minion extends Player
     {
         $chance = rand(0, 100);
         if ($chance < 10) {
-            echo "Banana strike skill activated!\n";
+            echo "<p style='font-style: italic; color: gold; font-weight: bold'>
+                Banana strike skill activated!<br></p>";
             return true;
         }
         return false;
@@ -18,7 +19,8 @@ class Minion extends Player
     {
         $chance = rand(0, 100);
         if ($chance < 20) {
-            echo "Umbrella shield skill activated!\n";
+            echo "<p style='font-style: italic; color: gold; font-weight: bold'>
+                Umbrella shield skill activated!<br></p>";
             return true;
         }
         return false;
@@ -36,13 +38,13 @@ class Minion extends Player
 
     public function getAttributes()
     {
-        echo "TIM powers:\n";
-        echo $this->getHealth() . " health\n";
-        echo $this->getDefense() . " defense\n";
-        echo $this->getSpeed() . " speed\n";
-        echo $this->getStrength() . " strength\n";
-        echo $this->getLuck() . "% luck\n";
-
+        return
+            "TIM powers:<br>" .
+            $this->getHealth() . " health<br>" .
+            $this->getDefense() . " defense<br>" .
+            $this->getSpeed() . " speed<br>" .
+            $this->getStrength() . " strength<br>" .
+            $this->getLuck() . "% luck<br>";
     }
 
     public function getDamage($strength)
